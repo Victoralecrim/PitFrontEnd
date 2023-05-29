@@ -6,7 +6,11 @@ export default {
     './src/pages/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      backgroundImage:{
+        'food' : 'url("https://hosting.renderforestsites.com/images/5699226/165066/e33418a5824d5f1a3d76b1ae4faf11f6.jpg")'
+      }
+    }
   },
   plugins: []
 }

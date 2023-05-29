@@ -1,15 +1,13 @@
-export const Card = () => {
+export const Card = ({ imgSrc, imgAlt, title, description }) => {
   return (
-    <div className="flex justify-center items-center flex-row">
-      <div className="max-w-sm bg-green-300 shadow-lg shadow-black opacity-100 w-80 px-9 pt-5 pb-7 mx-3">
-        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Noteworthy technology acquisitions 2021
-        </h5>
-        <p className="font-normal text-gray-700 dark:text-gray-400">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far, in reverse chronological order.
-        </p>
-      </div>
+    <div className="card-container bg-white w-60 rounded-lg shadow-xl flex flex-col my-2">
+      {imgSrc && imgAlt && (
+        <img src={imgSrc} alt={imgAlt} className="card-img rounded-t-lg" />
+      )}
+      {title && <h1 className="card-title mt-2 ml-4 mr-4">{title}</h1>}
+      {description && (
+        <p className="card-description mt-2 ml-4 mr-4">{description}</p>
+      )}
     </div>
   )
 }
